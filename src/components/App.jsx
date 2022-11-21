@@ -32,6 +32,14 @@ export function App() {
       alert(`${name} is already in your contact list`);
       return;
     }
+    if (
+      contacts.find(
+        contact => contact.number === number
+      )
+    ) {
+      alert(`${number} is already in your contact list`);
+      return;
+    }
 
     setContacts([contact, ...contacts]);
   };
